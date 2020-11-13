@@ -46,7 +46,7 @@ class Weather extends HTMLElement {
         fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${this.location}&units=imperial`, {
                 "method": "GET",
                 "headers": {
-                    "x-rapidapi-key": "026637f033msh5b5e3f97cabe4ccp1b213ejsn8a44f3ec1d8f",
+                    "x-rapidapi-key": "xxxxxxxxxxxx",
                     "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
                 }
             })
