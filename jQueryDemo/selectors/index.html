@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo - Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery Demo - Selectors</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">Heading One</h1>
+        <p id="para1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dolor quam. Suspendisse non turpis quam.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Phasellus sapien arcu, rhoncus a tristique ut, iaculis eget neque. 
+            <span>Ut interdum enim sit amet nibh mattis aliquet. Pellentesque congue lectus at ultricies tincidunt.</span> 
+            Cras tristique velit in varius egestas. Phasellus eget vulputate turpis.
+            Phasellus placerat neque in metus feugiat fermentum. 
+            In congue condimentum nibh ac dignissim.
+        </p>
+
+        <h1 class="heading2">Heading Two</h1>
+        <p class="para2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dolor quam. Suspendisse non turpis quam.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            <span>Ut interdum enim sit amet nibh mattis aliquet. Pellentesque congue lectus at ultricies tincidunt.</span>
+            Phasellus sapien arcu, rhoncus a tristique ut, iaculis eget neque. 
+            Ut interdum enim sit amet nibh mattis aliquet. Pellentesque congue lectus at ultricies tincidunt.
+            Cras tristique velit in varius egestas. Phasellus eget vulputate turpis.
+            Phasellus placerat neque in metus feugiat fermentum. 
+            In congue condimentum nibh ac dignissim.
+        </p>
+
+        <ul id="list">
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+        </ul>
+
+        <br>
+
+        <input type="button" value="Button 1">
+        <input type="submit" value="Button 1">
+        <input type="text">
+
+        <br>
+
+        <a href="http://google.com">Google</a>
+        <a href="http://yahoo.com">Yahoo</a>
+
+    </div>
+
+    <script>
+        // $('h1').hide();
+        // $('h1#heading1').hide();
+        // $('h1.heading2').hide();
+        // $('.heading2').hide();
+
+        $('p span').css('color', 'red');
+
+        // $('ul#list li:first').css('color', 'red');
+        // $('ul#list li:last').css('color', 'green');
+
+        $('ul#list li:even').css('background-color', 'yellow');
+        $('ul#list li:odd').css('background-color', 'lightblue');
+
+        $('ul#list li:nth-child(3n)').css('list-style', 'none');
+        // $('ul#list li:odd').css('background-color', 'lightblue');
+
+        $(':button').hide(); //type selector
+
+        $('[href]').css('color', 'red');
+        $('a[href="http://yahoo.com"]').css('color', 'green');
+
+
+    </script>
+    
+</body>
+</html>

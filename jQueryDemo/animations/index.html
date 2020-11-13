@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo - Animations</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .myClass {
+           color: blue;
+           background: black; 
+        }
+
+        #box {
+            background: darkgrey;
+            color: white;
+            width: 500px;
+            height: 90px;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery Demo - Animations</h1>
+    </header>
+    <div id="container">
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeToggle">Fade Toggle</button>
+
+        <br>
+        
+        <button id="btnSlideOut">Slide Out</button>
+        <button id="btnSlideIn">Slide In</button>
+        <button id="btnSlideToggle">Slide Toggle</button>
+        <div id="box">
+            <h1>Hello Animations</h1>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#btnFadeOut').click(function() {
+                $('#box').fadeOut(3000, function() {
+                    $('#btnFadeOut').text('Faded Out');
+                });
+            });
+
+            $('#btnFadeIn').click(function() {
+                $('#box').fadeIn(3000, function() {
+                    $('#btnFadeIn').text('Faded In');
+                });
+            });
+
+            $('#btnFadeToggle').click(function() {
+                $('#box').fadeToggle(3000, function() {
+                    $('#btnFadeToggle').text('Toggled');
+                });
+            });
+
+            $('#btnSlideOut').click(function() {
+                $('#box').slideUp(3000);
+            });
+
+            $('#btnSlideIn').click(function() {
+                $('#box').slideDown(3000);
+            });
+
+            $('#btnSlideToggle').click(function() {
+                $('#box').slideToggle(3000);
+            });
+        });
+    </script>
+    
+</body>
+</html>

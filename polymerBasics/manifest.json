@@ -1,0 +1,7 @@
+{
+  "name": "polymerBasics",
+  "short_name": "polymerBasics",
+  "description": "Basics of PolymerJS",
+  "start_url": "/",
+  "display": "standalone"
+}
