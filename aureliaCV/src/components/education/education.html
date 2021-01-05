@@ -1,0 +1,10 @@
+<template>
+    <div class="cv-content">
+        <div class="head-title">Education</div>
+        <div repeat.for="edu of education" class="cv-content-item">
+          <div class="title">${edu.title}</div>
+          <div class="subtitle">${edu.university}</div>
+          <div class="time">${edu.duration}</div>
+        </div>
+    </div>
+</template>

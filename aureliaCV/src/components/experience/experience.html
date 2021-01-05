@@ -1,0 +1,11 @@
+<template>
+    <div class="cv-content">
+        <div class="head-title">Experience</div>
+        <div repeat.for="exp of experience" class="cv-content-item">
+          <div class="title">${exp.title}</div>
+          <div class="subtitle">${exp.enterprise}</div>
+          <div class="time">${exp.duration}</div>
+          <div class="exprecince">${exp.experience}</div>
+        </div>
+    </div>
+</template>

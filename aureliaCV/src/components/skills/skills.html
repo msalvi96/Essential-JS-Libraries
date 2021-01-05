@@ -1,0 +1,15 @@
+<template>
+    <div class="cv-skills">
+        <div class="head-title">Primary Skills
+        </div>
+        <div class="cv-skills-item">
+          <div repeat.for="primaSkill of primarySkills" class="title">${primaSkill}</div>
+        </div>
+      </div>
+      <div class="cv-skills">
+        <div class="head-title">Secondary Skills</div>
+        <div class="cv-skills-item">
+          <div repeat.for="secondSkill of secondarySkills" class="title">${secondSkill}</div>
+        </div>
+      </div>
+</template>
